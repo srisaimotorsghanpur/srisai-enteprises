@@ -2,34 +2,30 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>SRI SAI ENTERPRISES</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<!-- Icons -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 
 <style>
 body{
   margin:0;
-  font-family:Segoe UI, Arial;
-  background:linear-gradient(180deg,#e8fff7,#9fe0d1,#8fd3c7);
-  color:#053333;
+  font-family:Segoe UI,Arial;
+  background:linear-gradient(180deg,#e6fffb,#b2f5ea);
+  color:#053b3b;
 }
 
 /* HEADER */
 header{
+  background:linear-gradient(120deg,#0b5ed7,#0dcaf0);
+  color:#fff;
   text-align:center;
   padding:40px 20px;
-  background:linear-gradient(120deg,#0b6aa8,#0aa2c0);
-  color:white;
 }
-header img{
-  width:90px;
-}
-header h1{
-  margin:10px 0;
-  font-size:36px;
-}
-header p{
-  font-size:18px;
-}
+header img{width:90px}
+header h1{margin:10px 0 5px}
+header p{margin:0;font-size:18px}
 
 /* NAV */
 nav{
@@ -40,104 +36,68 @@ nav{
 nav a{
   margin:0 15px;
   text-decoration:none;
-  color:#045c5c;
+  color:#0b5ed7;
   font-weight:600;
 }
 
-/* SECTION */
+/* SECTIONS */
 section{
   padding:60px 20px;
   text-align:center;
 }
-h2{
-  font-size:30px;
-}
-.subtitle{
-  max-width:900px;
-  margin:auto;
-  line-height:1.6;
-}
+h2{margin-bottom:10px}
 
 /* CARDS */
-.cards{
-  display:flex;
-  justify-content:center;
-  gap:30px;
-  flex-wrap:wrap;
-  margin-top:40px;
+.grid{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
+  gap:25px;
+  max-width:1100px;
+  margin:auto;
 }
 .card{
-  background:#ffffffcc;
+  background:#fff;
   border-radius:20px;
   padding:20px;
-  width:280px;
-  box-shadow:0 10px 25px rgba(0,0,0,0.15);
+  box-shadow:0 10px 25px rgba(0,0,0,.15);
+  transition:.3s;
 }
+.card:hover{transform:translateY(-5px)}
 .card img{
   width:100%;
   height:180px;
   object-fit:contain;
-  background:#f5f5f5;
-  border-radius:15px;
-}
-.card h3{
-  margin:15px 0 5px;
-}
-.price{
-  color:#0b8a3a;
-  font-weight:bold;
 }
 
 /* BUTTON */
-button{
-  margin-top:12px;
-  padding:10px 28px;
+.btn{
+  background:#0b5ed7;
+  color:#fff;
   border:none;
-  border-radius:25px;
-  background:#0b6aa8;
-  color:white;
+  padding:12px 30px;
+  border-radius:30px;
   cursor:pointer;
+  font-size:16px;
+  margin-top:10px;
 }
-button:hover{
-  background:#094f7d;
-}
+.btn:hover{background:#084298}
 
-/* MODAL */
-.modal{
-  display:none;
-  position:fixed;
-  inset:0;
-  background:rgba(0,0,0,0.6);
-  justify-content:center;
-  align-items:center;
-  z-index:999;
+/* ABOUT */
+.about{
+  max-width:900px;
+  margin:auto;
+  font-size:18px;
 }
-.modal-box{
-  background:white;
-  padding:25px;
-  border-radius:15px;
-  width:300px;
+.about ul{
+  text-align:left;
+  max-width:600px;
+  margin:20px auto;
 }
-.modal-box h3{
-  margin-top:0;
-}
-.modal-box a{
-  display:block;
-  margin:10px 0;
-  padding:12px;
-  border-radius:25px;
-  text-decoration:none;
-  color:white;
-  font-weight:bold;
-}
-.call{background:#0b6aa8;}
-.whatsapp{background:#25D366;}
-.close{background:#777;}
 
 /* CONTACT */
 .contact{
-  background:linear-gradient(120deg,#084d5e,#0a6f7f);
-  color:white;
+  background:linear-gradient(120deg,#003049,#0b5ed7);
+  color:#fff;
 }
 .contact a{
   color:#00ffcc;
@@ -145,10 +105,54 @@ button:hover{
   text-decoration:none;
 }
 
+/* MAP */
+iframe{
+  width:100%;
+  height:350px;
+  border:0;
+  border-radius:20px;
+  margin-top:20px;
+}
+
+/* MODAL */
+.modal{
+  display:none;
+  position:fixed;
+  inset:0;
+  background:rgba(0,0,0,.6);
+  align-items:center;
+  justify-content:center;
+  z-index:999;
+}
+.modal-box{
+  background:#fff;
+  padding:30px;
+  border-radius:20px;
+  text-align:center;
+  animation:pop .4s;
+}
+@keyframes pop{
+  from{transform:scale(.7);opacity:0}
+  to{transform:scale(1);opacity:1}
+}
+.modal-box h3{margin-bottom:15px}
+.modal-box a{
+  display:block;
+  margin:10px 0;
+  padding:12px;
+  border-radius:30px;
+  color:#fff;
+  text-decoration:none;
+  font-weight:bold;
+}
+.call{background:#0b5ed7}
+.whatsapp{background:#25d366}
+.close{background:#6c757d}
+
 /* FOOTER */
 footer{
-  background:#083c4a;
-  color:white;
+  background:#002233;
+  color:#fff;
   text-align:center;
   padding:15px;
 }
@@ -158,9 +162,9 @@ footer{
 <body>
 
 <header>
-  <img src="logo.jpeg">
+  <img src="logo.jpeg" alt="Logo">
   <h1>SRI SAI ENTERPRISES</h1>
-  <p>EV Scooter & Multi Brand Motorcycle Showroom</p>
+  <p>EV Scooters & Multi Brand Motorcycle Showroom</p>
 </header>
 
 <nav>
@@ -170,88 +174,76 @@ footer{
   <a href="#contact">Contact</a>
 </nav>
 
-<!-- EV -->
 <section id="ev">
   <h2>Electric Scooters</h2>
-  <p class="subtitle">
-    ✔ Zero fuel cost & low maintenance<br>
-    ✔ Smooth, silent & eco-friendly ride<br>
-    ✔ Best for daily commute & family use
-  </p>
-
-  <div class="cards">
+  <p>Smart, silent and eco-friendly EV scooters for modern India.</p>
+  <div class="grid">
     <div class="card">
       <img src="ev1.jpeg">
-      <h3>EV Scooters</h3>
-      <p class="price">₹ XXXXX</p>
-      <button onclick="openModal()">Enquire</button>
+      <h3>EV Scooter</h3>
+      <p>₹ XXXXX</p>
+      <button class="btn" onclick="openModal()">Enquire</button>
     </div>
-
     <div class="card">
       <img src="ev2.jpeg">
       <h3>EV Premium</h3>
-      <p class="price">₹ XXXXX</p>
-      <button onclick="openModal()">Enquire</button>
+      <p>₹ XXXXX</p>
+      <button class="btn" onclick="openModal()">Enquire</button>
     </div>
   </div>
 </section>
 
-<!-- BIKE -->
 <section id="bike">
   <h2>Multi Brand Motorcycle</h2>
-  <p class="subtitle">
-    ✔ Performance bikes from trusted brands<br>
-    ✔ Mileage & premium segments available<br>
-    ✔ Suitable for city & highway rides
-  </p>
-
-  <div class="cards">
+  <p>Performance and reliability from trusted motorcycle brands.</p>
+  <div class="grid">
     <div class="card">
       <img src="bike1.jpeg">
       <h3>Bike Model</h3>
-      <p class="price">₹ XXXXX</p>
-      <button onclick="openModal()">Enquire</button>
+      <p>₹ XXXXX</p>
+      <button class="btn" onclick="openModal()">Enquire</button>
     </div>
-
     <div class="card">
       <img src="bike2.jpeg">
       <h3>Bike Premium</h3>
-      <p class="price">₹ XXXXX</p>
-      <button onclick="openModal()">Enquire</button>
+      <p>₹ XXXXX</p>
+      <button class="btn" onclick="openModal()">Enquire</button>
     </div>
   </div>
 </section>
 
-<!-- ABOUT -->
 <section id="about">
   <h2>About Us</h2>
-  <p class="subtitle">
-    Sri Sai Enterprises is a trusted showroom offering **Sales, Service & Spare Parts** for EV scooters
-    and multi-brand motorcycles.<br><br>
-    ✔ Genuine spare parts<br>
-    ✔ Expert service technicians<br>
-    ✔ Customer-friendly support<br>
-    ✔ Reliable after-sales service
-  </p>
+  <div class="about">
+    Sri Sai Enterprises is committed to delivering quality two-wheelers with trusted service.
+    <ul>
+      <li>✔ Sales of EV Scooters & Motorcycles</li>
+      <li>✔ Authorized Service Support</li>
+      <li>✔ Genuine Spare Parts</li>
+      <li>✔ Insurance & Documentation Assistance</li>
+      <li>✔ Customer-first approach</li>
+    </ul>
+  </div>
 </section>
 
-<!-- CONTACT -->
 <section id="contact" class="contact">
   <h2>Contact & Location</h2>
-  <p><b>SRI SAI ENTERPRISES</b></p>
+  <p><strong>SRI SAI ENTERPRISES</strong></p>
   <p>Owner: Vijay Kumar Junoor</p>
-
   <p>
-    📞 <a href="tel:9989445385">9989445385 (Direct Call)</a>
+    <a href="tel:9989445385">
+      <i class="fa-solid fa-phone"></i> Call: 9989445385
+    </a>
+  </p>
+  <p>
+    <a href="https://wa.me/919989445385" target="_blank">
+      <i class="fa-brands fa-whatsapp"></i> WhatsApp Available
+    </a>
   </p>
 
-  <p>
-    💬 <a href="https://wa.me/919989445385" target="_blank">WhatsApp Chat</a>
-  </p>
-
-  <p>
-    📍 <a href="https://maps.app.goo.gl/CaZQcQXLudZ8uWrH6" target="_blank">View Location</a>
-  </p>
+  <iframe 
+    src="https://www.google.com/maps?q=SRISAI+MOTORS+HERO&output=embed">
+  </iframe>
 </section>
 
 <footer>
@@ -259,21 +251,21 @@ footer{
 </footer>
 
 <!-- MODAL -->
-<div class="modal" id="enquireModal">
+<div class="modal" id="modal">
   <div class="modal-box">
-    <h3>Enquire Now</h3>
+    <h3>Exact Price & Offers</h3>
     <a class="call" href="tel:9989445385">📞 Call Now</a>
     <a class="whatsapp" href="https://wa.me/919989445385" target="_blank">💬 WhatsApp</a>
-    <a class="close" href="#" onclick="closeModal()">Close</a>
+    <a class="close" onclick="closeModal()">Close</a>
   </div>
 </div>
 
 <script>
 function openModal(){
-  document.getElementById("enquireModal").style.display="flex";
+  document.getElementById("modal").style.display="flex";
 }
 function closeModal(){
-  document.getElementById("enquireModal").style.display="none";
+  document.getElementById("modal").style.display="none";
 }
 </script>
 
