@@ -5,40 +5,53 @@
 <title>SRI SAI ENTERPRISES</title>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<!-- ICONS -->
+<!-- FONT AWESOME -->
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 
 <style>
-*{margin:0;padding:0;box-sizing:border-box;font-family:Segoe UI,Arial;}
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+  font-family:Segoe UI,Arial,sans-serif;
+}
+
+/* ===== SIMPLE OLD BACKGROUND ===== */
 body{
-  background:linear-gradient(180deg,#e9f8f6,#cfeeee);
+  background:#f5f7fa;
   overflow-x:hidden;
 }
 
-/* ===== BACKGROUND DECOR ===== */
+/* ===== DECOR (TREES & BUTTERFLIES) ===== */
 .decor{
   position:fixed;
   inset:0;
   z-index:-1;
+  pointer-events:none;
 }
+
 .tree{
   position:absolute;
   bottom:0;
-  width:140px;
-  opacity:.15;
+  width:180px;
+  opacity:0.25;
 }
-.tree.left{left:20px;}
-.tree.right{right:20px;}
+.tree.left{left:10px;}
+.tree.right{right:10px;}
 
 .butterfly{
   position:absolute;
-  width:40px;
-  opacity:.6;
+  width:45px;
+  opacity:0.9;
   animation:fly 18s linear infinite;
 }
+.b1{top:20%; left:-60px;}
+.b2{top:45%; left:-120px; animation-delay:6s;}
+.b3{top:65%; left:-90px; animation-delay:12s;}
+
 @keyframes fly{
-  from{transform:translate(-10vw,90vh);}
-  to{transform:translate(110vw,10vh);}
+  from{transform:translateX(0);}
+  to{transform:translateX(120vw);}
 }
 
 /* ===== HEADER ===== */
@@ -46,29 +59,30 @@ header{
   background:linear-gradient(120deg,#0b5ed7,#0dcaf0);
   color:#fff;
   text-align:center;
-  padding:40px 15px;
+  padding:45px 15px;
 }
 header img{
-  width:140px;
-  margin-bottom:10px;
+  width:160px;
+  margin-bottom:12px;
 }
 header h1{
-  font-size:36px;
+  font-size:38px;
   letter-spacing:1px;
 }
 header p{
   font-size:18px;
-  opacity:.95;
+  opacity:0.95;
 }
 
 /* ===== NAV ===== */
 nav{
-  background:#fff;
+  background:#ffffff;
   text-align:center;
-  padding:10px;
+  padding:12px;
+  box-shadow:0 2px 8px rgba(0,0,0,0.08);
 }
 nav a{
-  margin:0 12px;
+  margin:0 14px;
   text-decoration:none;
   color:#0b5ed7;
   font-weight:600;
@@ -76,16 +90,16 @@ nav a{
 
 /* ===== SECTIONS ===== */
 section{
-  padding:50px 15px;
+  padding:55px 15px;
   text-align:center;
 }
 h2{
   font-size:30px;
-  margin-bottom:10px;
+  margin-bottom:8px;
 }
 .sub{
   color:#555;
-  margin-bottom:25px;
+  margin-bottom:28px;
 }
 
 /* ===== CARDS ===== */
@@ -93,41 +107,47 @@ h2{
   display:flex;
   justify-content:center;
   flex-wrap:wrap;
-  gap:25px;
+  gap:28px;
 }
 .card{
-  background:#fff;
-  width:280px;
+  background:#ffffff;
+  width:290px;
   padding:20px;
-  border-radius:18px;
-  box-shadow:0 10px 25px rgba(0,0,0,.12);
+  border-radius:20px;
+  box-shadow:0 12px 25px rgba(0,0,0,0.12);
 }
 .card img{
   width:100%;
+  border-radius:14px;
+  background:#f1f1f1;
+}
+.card h3{
+  margin-top:10px;
 }
 .price{
   color:#198754;
   font-weight:700;
-  margin:5px 0;
+  margin:6px 0;
 }
 .btn{
-  margin-top:10px;
-  padding:10px 18px;
+  margin-top:12px;
+  padding:10px 22px;
   border:none;
   border-radius:30px;
   cursor:pointer;
   color:#fff;
   background:#0b5ed7;
+  font-size:15px;
 }
 
 /* ===== ABOUT ===== */
 .about ul{
-  max-width:700px;
-  margin:20px auto;
+  max-width:750px;
+  margin:25px auto;
   text-align:left;
 }
 .about li{
-  margin:10px 0;
+  margin:12px 0;
   font-size:17px;
 }
 
@@ -145,9 +165,10 @@ h2{
 /* ===== MAP ===== */
 .map iframe{
   width:100%;
-  height:350px;
-  border-radius:15px;
+  height:360px;
+  border-radius:18px;
   border:none;
+  margin-top:20px;
 }
 
 /* ===== MODAL ===== */
@@ -155,49 +176,44 @@ h2{
   display:none;
   position:fixed;
   inset:0;
-  background:rgba(0,0,0,.6);
+  background:rgba(0,0,0,0.6);
   justify-content:center;
   align-items:center;
 }
 .modal-box{
   background:#fff;
   padding:25px;
-  width:300px;
-  border-radius:20px;
+  width:320px;
+  border-radius:22px;
   text-align:center;
 }
 .modal-box h3{
-  margin-bottom:10px;
+  margin-bottom:8px;
 }
 .modal-box p{
   font-size:15px;
   color:#555;
 }
-.call{
-  background:#0b5ed7;
-}
-.whatsapp{
-  background:#25D366;
-}
-.close{
-  background:#6c757d;
-}
 .modal-box button{
   width:100%;
   margin-top:10px;
-  padding:10px;
+  padding:12px;
   border:none;
-  border-radius:25px;
+  border-radius:28px;
   color:#fff;
+  font-size:15px;
   cursor:pointer;
 }
+.call{background:#0b5ed7;}
+.whatsapp{background:#25D366;}
+.close{background:#6c757d;}
 
 /* ===== FOOTER ===== */
 footer{
   background:#083d77;
   color:#fff;
   text-align:center;
-  padding:12px;
+  padding:14px;
 }
 </style>
 </head>
@@ -208,12 +224,15 @@ footer{
 <div class="decor">
   <img class="tree left" src="https://i.imgur.com/2yaf2wb.png">
   <img class="tree right" src="https://i.imgur.com/2yaf2wb.png">
-  <img class="butterfly" style="top:20%" src="https://i.imgur.com/1X4FQbK.png">
-  <img class="butterfly" style="top:40%;animation-delay:5s" src="https://i.imgur.com/1X4FQbK.png">
+
+  <img class="butterfly b1" src="https://i.imgur.com/1X4FQbK.png">
+  <img class="butterfly b2" src="https://i.imgur.com/1X4FQbK.png">
+  <img class="butterfly b3" src="https://i.imgur.com/1X4FQbK.png">
 </div>
 
 <header>
-  <img src="logo.png" alt="Logo">
+  <!-- put your logo.png in same folder -->
+  <img src="logo.png" alt="Sri Sai Enterprises Logo">
   <h1>SRI SAI ENTERPRISES</h1>
   <p>EV Scooters & Multi Brand Motorcycle Showroom</p>
 </header>
@@ -232,7 +251,7 @@ footer{
   <div class="cards">
     <div class="card">
       <img src="https://i.imgur.com/6s8QX9p.png">
-      <h3>EV Scooters</h3>
+      <h3>EV Scooter</h3>
       <div class="price">₹ XXXXX</div>
       <button class="btn" onclick="openModal()">Enquire</button>
     </div>
@@ -271,10 +290,10 @@ footer{
   <h2>About Us</h2>
   <ul>
     <li>✔ Sales of EV Scooters & Multi Brand Motorcycles</li>
-    <li>✔ Authorized Service & Maintenance</li>
+    <li>✔ Authorized Service & Periodic Maintenance</li>
     <li>✔ Genuine Spare Parts & Accessories</li>
-    <li>✔ Exchange & Finance Assistance</li>
-    <li>✔ Customer-first approach with trusted service</li>
+    <li>✔ Insurance, Exchange & Finance Support</li>
+    <li>✔ Trusted showroom with customer-first service</li>
   </ul>
 </section>
 
@@ -289,8 +308,9 @@ footer{
   <p>💬 WhatsApp Available</p>
 
   <div class="map">
-    <iframe 
-      src="https://www.google.com/maps?q=SRISAI%20MOTORS%20HERO&output=embed">
+    <iframe
+      src="https://www.google.com/maps?q=SRISAI%20MOTORS%20HERO&output=embed"
+      loading="lazy">
     </iframe>
   </div>
 </section>
@@ -303,7 +323,7 @@ footer{
 <div class="modal" id="modal">
   <div class="modal-box">
     <h3>Exact Price & Offers</h3>
-    <p>For latest price, discounts & availability</p>
+    <p>Call or WhatsApp for latest price, offers & availability</p>
 
     <button class="call" onclick="location.href='tel:9989445385'">
       <i class="fa fa-phone"></i> Call Now
