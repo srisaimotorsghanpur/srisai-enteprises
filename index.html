@@ -5,14 +5,13 @@
 <title>SRI SAI ENTERPRISES</title>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<!-- FONT ICONS -->
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 
 <style>
 *{margin:0;padding:0;box-sizing:border-box;font-family:Segoe UI,Arial;}
 
 body{
-  background:linear-gradient(180deg,#eef9f8,#d9f1ef);
+  background:linear-gradient(180deg,#eef9f7,#d7f1ee);
   overflow-x:hidden;
 }
 
@@ -24,25 +23,20 @@ header{
   padding:35px 15px;
 }
 header img{
-  width:180px;
-  margin-bottom:10px;
+  width:120px;
+  margin-bottom:8px;
 }
-header h1{
-  font-size:36px;
-}
-header p{
-  font-size:18px;
-  opacity:.95;
-}
+header h1{font-size:34px;}
+header p{font-size:17px;opacity:.95;}
 
 /* NAV */
 nav{
   background:#fff;
-  padding:12px;
   text-align:center;
+  padding:10px;
 }
 nav a{
-  margin:0 15px;
+  margin:0 12px;
   text-decoration:none;
   color:#0b5ed7;
   font-weight:600;
@@ -50,60 +44,56 @@ nav a{
 
 /* SECTIONS */
 section{
-  padding:50px 15px;
+  padding:45px 15px;
   text-align:center;
 }
-h2{
-  font-size:30px;
-}
-.sub{
-  margin:10px 0 25px;
-  color:#555;
-}
+h2{font-size:28px;margin-bottom:8px;}
+.sub{color:#555;margin-bottom:25px;}
 
 /* CARDS */
 .cards{
   display:flex;
-  flex-wrap:wrap;
   justify-content:center;
+  flex-wrap:wrap;
   gap:25px;
 }
 .card{
   background:#fff;
   width:280px;
-  padding:20px;
-  border-radius:18px;
-  box-shadow:0 10px 25px rgba(0,0,0,.12);
+  padding:18px;
+  border-radius:16px;
+  box-shadow:0 8px 20px rgba(0,0,0,.12);
 }
 .card img{
   width:100%;
   height:180px;
-  object-fit:contain;
+  object-fit:cover;
+  border-radius:12px;
 }
 .price{
   color:#198754;
   font-weight:700;
-  margin:8px 0;
+  margin:6px 0;
 }
 .btn{
   margin-top:10px;
   padding:10px 18px;
   border:none;
-  border-radius:30px;
-  background:#0b5ed7;
-  color:#fff;
+  border-radius:25px;
   cursor:pointer;
+  color:#fff;
+  background:#0b5ed7;
 }
 
 /* ABOUT */
 .about ul{
-  max-width:750px;
+  max-width:700px;
   margin:20px auto;
   text-align:left;
 }
 .about li{
-  font-size:17px;
   margin:10px 0;
+  font-size:16px;
 }
 
 /* CONTACT */
@@ -112,7 +102,7 @@ h2{
   color:#fff;
 }
 .contact a{
-  color:#9eff9e;
+  color:#7CFF7C;
   font-weight:700;
   text-decoration:none;
 }
@@ -121,7 +111,7 @@ h2{
 .map iframe{
   width:100%;
   height:350px;
-  border-radius:15px;
+  border-radius:14px;
   border:none;
   margin-top:20px;
 }
@@ -137,17 +127,19 @@ h2{
 }
 .modal-box{
   background:#fff;
-  padding:25px;
+  padding:22px;
   width:300px;
-  border-radius:20px;
+  border-radius:18px;
   text-align:center;
 }
+.modal-box h3{margin-bottom:6px;}
+.modal-box p{font-size:14px;color:#555;}
 .modal-box button{
   width:100%;
   margin-top:10px;
   padding:10px;
   border:none;
-  border-radius:25px;
+  border-radius:22px;
   color:#fff;
   cursor:pointer;
 }
@@ -168,7 +160,7 @@ footer{
 <body>
 
 <header>
-  <img src="images/logo.png" alt="Sri Sai Enterprises Logo">
+  <img src="logo.png" alt="Sri Sai Enterprises Logo">
   <h1>SRI SAI ENTERPRISES</h1>
   <p>EV Scooters & Multi Brand Motorcycle Showroom</p>
 </header>
@@ -187,14 +179,14 @@ footer{
 
   <div class="cards">
     <div class="card">
-      <img src="images/ev-scooter.png">
+      <img src="images/ev1.jpg" alt="EV Scooter">
       <h3>EV Scooter</h3>
       <div class="price">₹ XXXXX</div>
       <button class="btn" onclick="openModal()">Enquire</button>
     </div>
 
     <div class="card">
-      <img src="images/ev-premium.png">
+      <img src="images/ev2.jpg" alt="EV Premium">
       <h3>EV Premium</h3>
       <div class="price">₹ XXXXX</div>
       <button class="btn" onclick="openModal()">Enquire</button>
@@ -209,14 +201,14 @@ footer{
 
   <div class="cards">
     <div class="card">
-      <img src="images/bike-model.png">
+      <img src="images/bike1.jpg" alt="Bike Model">
       <h3>Bike Model</h3>
       <div class="price">₹ XXXXX</div>
       <button class="btn" onclick="openModal()">Enquire</button>
     </div>
 
     <div class="card">
-      <img src="images/bike-premium.png">
+      <img src="images/bike2.jpg" alt="Bike Premium">
       <h3>Bike Premium</h3>
       <div class="price">₹ XXXXX</div>
       <button class="btn" onclick="openModal()">Enquire</button>
@@ -231,8 +223,8 @@ footer{
     <li>✔ Sales of EV Scooters & Multi Brand Motorcycles</li>
     <li>✔ Authorized Service & Maintenance</li>
     <li>✔ Genuine Spare Parts & Accessories</li>
-    <li>✔ Exchange & Finance Support</li>
-    <li>✔ Trusted service with customer satisfaction</li>
+    <li>✔ Finance, Insurance & Exchange Support</li>
+    <li>✔ Trusted customer service & support</li>
   </ul>
 </section>
 
@@ -249,7 +241,7 @@ footer{
 
   <div class="map">
     <iframe 
-      src="https://www.google.com/maps?q=SRISAI%20MOTORS%20HERO&output=embed">
+      src="https://www.google.com/maps?q=SRISAI%20MOTORS%20HERO&z=16&output=embed">
     </iframe>
   </div>
 </section>
@@ -262,14 +254,14 @@ footer{
 <div class="modal" id="modal">
   <div class="modal-box">
     <h3>Exact Price & Offers</h3>
-    <p>Call or WhatsApp for latest price & offers</p>
+    <p>Contact us for latest price & offers</p>
 
     <button class="call" onclick="location.href='tel:9989445385'">
-      <i class="fa fa-phone"></i> Call Now
+      <i class="fa fa-phone"></i> Call Primary
     </button>
 
     <button class="call" onclick="location.href='tel:9866778223'">
-      <i class="fa fa-phone"></i> Secondary Call
+      <i class="fa fa-phone"></i> Call Secondary
     </button>
 
     <button class="whatsapp" onclick="location.href='https://wa.me/919989445385'">
