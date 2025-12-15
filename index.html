@@ -2,65 +2,46 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
-<title>SRI SAI ENTERPRISES</title>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-<!-- Icons -->
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+<title>SRI SAI ENTERPRISES</title>
 
 <style>
-*{
-  box-sizing:border-box;
-  font-family:Segoe UI, Arial, sans-serif;
-}
-
 body{
   margin:0;
-  background:linear-gradient(180deg,#e8f7f5,#cfeeed);
-  color:#033;
+  font-family:Segoe UI, Arial;
+  background:linear-gradient(180deg,#e8fff7,#9fe0d1,#8fd3c7);
+  color:#053333;
 }
 
 /* HEADER */
 header{
-  background:linear-gradient(120deg,#0b6fa4,#0fa3b1);
-  color:white;
   text-align:center;
   padding:40px 20px;
+  background:linear-gradient(120deg,#0b6aa8,#0aa2c0);
+  color:white;
 }
-
 header img{
   width:90px;
-  margin-bottom:10px;
 }
-
 header h1{
-  margin:10px 0 5px;
+  margin:10px 0;
+  font-size:36px;
 }
-
 header p{
-  margin:0;
-  font-size:16px;
+  font-size:18px;
 }
 
 /* NAV */
 nav{
-  background:#ffffffcc;
+  background:#ffffffdd;
   padding:12px;
   text-align:center;
-  position:sticky;
-  top:0;
-  z-index:100;
 }
-
 nav a{
   margin:0 15px;
   text-decoration:none;
-  color:#035;
+  color:#045c5c;
   font-weight:600;
-}
-
-nav a:hover{
-  color:#0b6fa4;
 }
 
 /* SECTION */
@@ -68,14 +49,13 @@ section{
   padding:60px 20px;
   text-align:center;
 }
-
-section h2{
-  margin-bottom:10px;
+h2{
+  font-size:30px;
 }
-
 .subtitle{
-  color:#055;
-  margin-bottom:40px;
+  max-width:900px;
+  margin:auto;
+  line-height:1.6;
 }
 
 /* CARDS */
@@ -84,154 +64,160 @@ section h2{
   justify-content:center;
   gap:30px;
   flex-wrap:wrap;
+  margin-top:40px;
 }
-
 .card{
-  background:white;
-  width:300px;
+  background:#ffffffcc;
+  border-radius:20px;
   padding:20px;
-  border-radius:18px;
+  width:280px;
   box-shadow:0 10px 25px rgba(0,0,0,0.15);
-  display:flex;
-  flex-direction:column;
-  align-items:center;
 }
-
 .card img{
   width:100%;
   height:180px;
   object-fit:contain;
-  margin-bottom:15px;
+  background:#f5f5f5;
+  border-radius:15px;
 }
-
 .card h3{
-  margin:10px 0 5px;
+  margin:15px 0 5px;
 }
-
 .price{
+  color:#0b8a3a;
   font-weight:bold;
-  color:#0b6fa4;
-  margin-bottom:15px;
 }
 
+/* BUTTON */
 button{
-  background:#0b6fa4;
+  margin-top:12px;
+  padding:10px 28px;
   border:none;
-  color:white;
-  padding:10px 22px;
   border-radius:25px;
+  background:#0b6aa8;
+  color:white;
   cursor:pointer;
 }
-
 button:hover{
-  background:#094e73;
+  background:#094f7d;
 }
+
+/* MODAL */
+.modal{
+  display:none;
+  position:fixed;
+  inset:0;
+  background:rgba(0,0,0,0.6);
+  justify-content:center;
+  align-items:center;
+  z-index:999;
+}
+.modal-box{
+  background:white;
+  padding:25px;
+  border-radius:15px;
+  width:300px;
+}
+.modal-box h3{
+  margin-top:0;
+}
+.modal-box a{
+  display:block;
+  margin:10px 0;
+  padding:12px;
+  border-radius:25px;
+  text-decoration:none;
+  color:white;
+  font-weight:bold;
+}
+.call{background:#0b6aa8;}
+.whatsapp{background:#25D366;}
+.close{background:#777;}
 
 /* CONTACT */
 .contact{
-  background:#063f4d;
+  background:linear-gradient(120deg,#084d5e,#0a6f7f);
   color:white;
-  padding:50px 20px;
 }
-
-.contact h2{
-  color:#ffffff;
-}
-
-.contact p{
-  margin:8px 0;
-}
-
-.contact i{
-  margin-right:8px;
-  color:#25d366;
-}
-
-/* MAP */
-.map iframe{
-  width:100%;
-  height:380px;
-  border:0;
-  border-radius:15px;
-  margin-top:20px;
+.contact a{
+  color:#00ffcc;
+  font-weight:bold;
+  text-decoration:none;
 }
 
 /* FOOTER */
 footer{
-  background:#022b34;
+  background:#083c4a;
   color:white;
   text-align:center;
   padding:15px;
-  font-size:14px;
-}
-
-/* RESPONSIVE */
-@media(max-width:768px){
-  .cards{
-    flex-direction:column;
-    align-items:center;
-  }
 }
 </style>
 </head>
 
 <body>
 
-<!-- HEADER -->
 <header>
-  <img src="logo.jpeg" alt="Logo">
+  <img src="logo.jpeg">
   <h1>SRI SAI ENTERPRISES</h1>
   <p>EV Scooter & Multi Brand Motorcycle Showroom</p>
 </header>
 
-<!-- NAV -->
 <nav>
   <a href="#ev">EV Scooters</a>
-  <a href="#bikes">Multi Brand Motorcycle</a>
+  <a href="#bike">Multi Brand Motorcycle</a>
   <a href="#about">About</a>
   <a href="#contact">Contact</a>
 </nav>
 
-<!-- EV SCOOTERS -->
+<!-- EV -->
 <section id="ev">
   <h2>Electric Scooters</h2>
-  <p class="subtitle">Smart, silent and eco-friendly electric scooters for modern India.</p>
+  <p class="subtitle">
+    ✔ Zero fuel cost & low maintenance<br>
+    ✔ Smooth, silent & eco-friendly ride<br>
+    ✔ Best for daily commute & family use
+  </p>
 
   <div class="cards">
     <div class="card">
-      <img src="ev1.jpeg" alt="EV Scooter">
-      <h3>EV Scooter</h3>
-      <div class="price">₹ XXXXX</div>
-      <button>Enquire</button>
+      <img src="ev1.jpeg">
+      <h3>EV Scooters</h3>
+      <p class="price">₹ XXXXX</p>
+      <button onclick="openModal()">Enquire</button>
     </div>
 
     <div class="card">
-      <img src="ev2.jpeg" alt="EV Premium">
+      <img src="ev2.jpeg">
       <h3>EV Premium</h3>
-      <div class="price">₹ XXXXX</div>
-      <button>Enquire</button>
+      <p class="price">₹ XXXXX</p>
+      <button onclick="openModal()">Enquire</button>
     </div>
   </div>
 </section>
 
-<!-- MULTI BRAND MOTORCYCLE -->
-<section id="bikes">
+<!-- BIKE -->
+<section id="bike">
   <h2>Multi Brand Motorcycle</h2>
-  <p class="subtitle">Performance and reliability from trusted motorcycle brands.</p>
+  <p class="subtitle">
+    ✔ Performance bikes from trusted brands<br>
+    ✔ Mileage & premium segments available<br>
+    ✔ Suitable for city & highway rides
+  </p>
 
   <div class="cards">
     <div class="card">
-      <img src="bike1.jpeg" alt="Bike Model">
+      <img src="bike1.jpeg">
       <h3>Bike Model</h3>
-      <div class="price">₹ XXXXX</div>
-      <button>Enquire</button>
+      <p class="price">₹ XXXXX</p>
+      <button onclick="openModal()">Enquire</button>
     </div>
 
     <div class="card">
-      <img src="bike2.jpeg" alt="Bike Premium">
+      <img src="bike2.jpeg">
       <h3>Bike Premium</h3>
-      <div class="price">₹ XXXXX</div>
-      <button>Enquire</button>
+      <p class="price">₹ XXXXX</p>
+      <button onclick="openModal()">Enquire</button>
     </div>
   </div>
 </section>
@@ -240,34 +226,56 @@ footer{
 <section id="about">
   <h2>About Us</h2>
   <p class="subtitle">
-    Sri Sai Enterprises is committed to providing reliable, eco-friendly and
-    performance-driven two-wheelers with trusted service and customer satisfaction.
+    Sri Sai Enterprises is a trusted showroom offering **Sales, Service & Spare Parts** for EV scooters
+    and multi-brand motorcycles.<br><br>
+    ✔ Genuine spare parts<br>
+    ✔ Expert service technicians<br>
+    ✔ Customer-friendly support<br>
+    ✔ Reliable after-sales service
   </p>
 </section>
 
 <!-- CONTACT -->
 <section id="contact" class="contact">
   <h2>Contact & Location</h2>
-  <p><strong>SRI SAI ENTERPRISES</strong></p>
+  <p><b>SRI SAI ENTERPRISES</b></p>
   <p>Owner: Vijay Kumar Junoor</p>
+
   <p>
-    <i class="fa-solid fa-phone"></i> 9989445385
-  </p>
-  <p>
-    <i class="fa-brands fa-whatsapp"></i> WhatsApp Available
+    📞 <a href="tel:9989445385">9989445385 (Direct Call)</a>
   </p>
 
-  <div class="map">
-    <iframe 
-      src="https://www.google.com/maps?q=SRISAI%20MOTORS%20HERO&output=embed">
-    </iframe>
-  </div>
+  <p>
+    💬 <a href="https://wa.me/919989445385" target="_blank">WhatsApp Chat</a>
+  </p>
+
+  <p>
+    📍 <a href="https://maps.app.goo.gl/CaZQcQXLudZ8uWrH6" target="_blank">View Location</a>
+  </p>
 </section>
 
-<!-- FOOTER -->
 <footer>
   © 2025 Sri Sai Enterprises. All Rights Reserved.
 </footer>
+
+<!-- MODAL -->
+<div class="modal" id="enquireModal">
+  <div class="modal-box">
+    <h3>Enquire Now</h3>
+    <a class="call" href="tel:9989445385">📞 Call Now</a>
+    <a class="whatsapp" href="https://wa.me/919989445385" target="_blank">💬 WhatsApp</a>
+    <a class="close" href="#" onclick="closeModal()">Close</a>
+  </div>
+</div>
+
+<script>
+function openModal(){
+  document.getElementById("enquireModal").style.display="flex";
+}
+function closeModal(){
+  document.getElementById("enquireModal").style.display="none";
+}
+</script>
 
 </body>
 </html>
