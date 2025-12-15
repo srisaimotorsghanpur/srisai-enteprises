@@ -23,7 +23,7 @@ body{
 /* HEADER */
 header{
   background:linear-gradient(120deg,#0b5ed7,#0dcaf0);
-  color:white;
+  color:#fff;
   text-align:center;
   padding:30px 15px;
 }
@@ -40,7 +40,7 @@ header p{
 
 /* NAV */
 nav{
-  background:white;
+  background:#fff;
   text-align:center;
   padding:10px;
 }
@@ -51,7 +51,7 @@ nav a{
   font-weight:bold;
 }
 
-/* SECTION */
+/* SECTIONS */
 section{
   padding:50px 15px;
   text-align:center;
@@ -73,7 +73,7 @@ h2{
   gap:25px;
 }
 .card{
-  background:white;
+  background:#fff;
   width:280px;
   padding:20px;
   border-radius:18px;
@@ -90,12 +90,12 @@ h2{
   margin:6px 0;
 }
 .btn{
-  margin-top:10px;
+  margin-top:12px;
   padding:10px 22px;
   border:none;
   border-radius:25px;
   background:#0b5ed7;
-  color:white;
+  color:#fff;
   cursor:pointer;
 }
 
@@ -104,7 +104,7 @@ h2{
   background:#f8fefe;
 }
 .about p{
-  max-width:700px;
+  max-width:750px;
   margin:0 auto 20px;
   color:#444;
 }
@@ -120,7 +120,7 @@ h2{
 /* CONTACT */
 .contact{
   background:linear-gradient(120deg,#0b5ed7,#0dcaf0);
-  color:white;
+  color:#fff;
 }
 .contact a{
   color:#90ff90;
@@ -147,7 +147,7 @@ iframe{
   align-items:center;
 }
 .modal-box{
-  background:white;
+  background:#fff;
   width:320px;
   padding:25px;
   border-radius:18px;
@@ -167,7 +167,7 @@ iframe{
   margin-top:10px;
   border:none;
   border-radius:25px;
-  color:white;
+  color:#fff;
   cursor:pointer;
 }
 .call{ background:#0b5ed7; }
@@ -177,7 +177,7 @@ iframe{
 /* FOOTER */
 footer{
   background:#083d77;
-  color:white;
+  color:#fff;
   text-align:center;
   padding:12px;
 }
@@ -199,6 +199,7 @@ footer{
   <a href="#contact">Contact</a>
 </nav>
 
+<!-- EV SCOOTERS -->
 <section id="ev">
   <h2>Electric Scooters</h2>
   <p class="sub">Smart • Silent • Eco-friendly • Low Running Cost</p>
@@ -220,6 +221,7 @@ footer{
   </div>
 </section>
 
+<!-- BIKE -->
 <section id="bike">
   <h2>Multi Brand Motorcycle</h2>
   <p class="sub">Performance • Reliability • Trusted Brands</p>
@@ -241,11 +243,12 @@ footer{
   </div>
 </section>
 
+<!-- ABOUT -->
 <section id="about" class="about">
   <h2>About Us</h2>
   <p>
     Sri Sai Enterprises is a trusted EV scooter and multi-brand motorcycle showroom
-    serving Ghanpur with quality vehicles and reliable service.
+    in Ghanpur, committed to quality vehicles, genuine spare parts and reliable service.
   </p>
   <ul>
     <li>✔ EV Scooters & Multi Brand Motorcycle Sales</li>
@@ -256,17 +259,29 @@ footer{
   </ul>
 </section>
 
+<!-- CONTACT -->
 <section id="contact" class="contact">
   <h2>Contact & Location</h2>
+
   <p><b>SRI SAI ENTERPRISES</b></p>
   <p>Owner: Vijay Kumar Junoor</p>
+
   <p>
     📞 <a href="tel:9989445385">9989445385</a> |
     <a href="tel:9866778223">9866778223</a>
   </p>
-  <p>💬 WhatsApp Available</p>
 
-  <iframe src="https://www.google.com/maps?q=SRISAI%20MOTORS%20HERO&output=embed"></iframe>
+  <p>
+    💬 <a href="https://wa.me/919989445385" target="_blank">
+      WhatsApp Available
+    </a>
+  </p>
+
+  <!-- EXACT MAP -->
+  <iframe
+    src="https://www.google.com/maps?q=SRISAI%20MOTORS%20HERO%20Ghanpur&output=embed"
+    loading="lazy">
+  </iframe>
 </section>
 
 <footer>
@@ -277,7 +292,7 @@ footer{
 <div class="modal" id="modal">
   <div class="modal-box">
     <h3>Exact Price & Offers</h3>
-    <p>Call or WhatsApp for latest price, discounts & availability</p>
+    <p>Call or WhatsApp for latest price & availability</p>
 
     <button class="call" onclick="location.href='tel:9989445385'">
       <i class="fa fa-phone"></i> Call 9989445385
@@ -306,4 +321,3 @@ function closeModal(){
 
 </body>
 </html>
-
