@@ -1,107 +1,105 @@
-Q<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
 <meta charset="UTF-8">
-<title>SRI SAI ENTERPRISES</title>
+<title>Sri Sai Enterprises</title>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+<!-- FONT -->
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
 
 <style>
-*{margin:0;padding:0;box-sizing:border-box;font-family:Segoe UI,Arial}
+*{
+  box-sizing:border-box;
+  font-family:'Poppins',sans-serif;
+  margin:0;
+  padding:0;
+}
+
+/* ===== BACKGROUND WITH TREES & BUTTERFLIES ===== */
 body{
-  background:#e9f6f3;
+  background:
+    url("https://i.ibb.co/9Y8n4C5/trees-bg.png") left bottom no-repeat,
+    url("https://i.ibb.co/9Y8n4C5/trees-bg.png") right bottom no-repeat,
+    linear-gradient(#eaf7f1,#d6efe6);
+  background-size:300px,300px,cover;
   overflow-x:hidden;
 }
 
-/* ===== DECOR LAYER (TREES & BUTTERFLIES) ===== */
-.decor{
-  position:fixed;
-  inset:0;
-  pointer-events:none;
-  z-index:0;
-}
-.tree{
-  position:absolute;
-  bottom:0;
-  width:160px;
-  opacity:0.25;
-}
-.tree.left{left:0}
-.tree.right{right:0}
-
+/* BUTTERFLIES */
 .butterfly{
-  position:absolute;
-  width:35px;
+  position:fixed;
+  width:40px;
   animation:fly 18s linear infinite;
-  opacity:0.8;
+  pointer-events:none;
+  z-index:1;
 }
+.b1{top:20%;left:-50px;animation-delay:0s;}
+.b2{top:40%;left:-80px;animation-delay:6s;}
+.b3{top:60%;left:-60px;animation-delay:12s;}
+
 @keyframes fly{
-  from{transform:translate(-10vw,80vh)}
-  to{transform:translate(110vw,-10vh)}
+  0%{transform:translateX(0) translateY(0) rotate(0deg);}
+  50%{transform:translateX(60vw) translateY(-40px) rotate(10deg);}
+  100%{transform:translateX(120vw) translateY(20px) rotate(-10deg);}
 }
 
 /* ===== HEADER ===== */
 header{
-  background:#0b5ed7;
+  background:#0b63b6;
   color:#fff;
   text-align:center;
-  padding:25px 10px;
+  padding:20px;
   position:relative;
   z-index:2;
 }
 header img{
-  width:90px;
-  display:block;
-  margin:0 auto 8px;
-}
-nav{
-  background:#fff;
-  padding:10px;
-  text-align:center;
-  position:relative;
-  z-index:2;
+  width:80px;
 }
 nav a{
-  margin:0 12px;
+  color:#fff;
+  margin:0 15px;
   text-decoration:none;
-  color:#0b5ed7;
-  font-weight:600;
+  font-weight:500;
 }
 
 /* ===== SECTIONS ===== */
 section{
-  padding:50px 15px;
+  padding:50px 20px;
   text-align:center;
   position:relative;
   z-index:2;
 }
-h2{margin-bottom:10px}
 
-/* ===== CARDS ===== */
 .cards{
   display:flex;
   justify-content:center;
   flex-wrap:wrap;
   gap:25px;
 }
+
 .card{
   background:#fff;
   width:260px;
   padding:15px;
-  border-radius:18px;
-  box-shadow:0 10px 20px rgba(0,0,0,.12);
+  border-radius:15px;
+  box-shadow:0 10px 25px rgba(0,0,0,0.15);
 }
-.card img{width:100%;border-radius:12px}
-.price{color:#198754;font-weight:700}
-.btn{
-  margin-top:10px;
-  padding:10px 20px;
-  border:none;
-  border-radius:25px;
-  background:#0b5ed7;
+.card img{
+  width:100%;
+}
+.price{
+  color:#0a7c47;
+  font-weight:600;
+}
+button{
+  background:#0b63b6;
   color:#fff;
+  border:none;
+  padding:10px 20px;
+  border-radius:25px;
   cursor:pointer;
+  margin-top:10px;
 }
 
 /* ===== MODAL ===== */
@@ -109,49 +107,53 @@ h2{margin-bottom:10px}
   display:none;
   position:fixed;
   inset:0;
-  background:rgba(0,0,0,.6);
-  justify-content:center;
+  background:rgba(0,0,0,0.5);
   align-items:center;
-  z-index:5;
+  justify-content:center;
+  z-index:10;
 }
 .modal-box{
   background:#fff;
-  padding:25px;
-  border-radius:20px;
-  width:300px;
+  width:320px;
+  padding:20px;
+  border-radius:15px;
+  text-align:center;
 }
-.modal-box button{
-  width:100%;
-  padding:10px;
-  margin-top:10px;
-  border:none;
+.modal-box a{
+  display:block;
+  padding:12px;
+  margin:10px 0;
   border-radius:25px;
   color:#fff;
-  font-size:15px;
+  text-decoration:none;
 }
-.call{background:#0b5ed7}
-.whatsapp{background:#25D366}
-.close{background:#6c757d}
+.call{background:#0b63b6;}
+.call2{background:#1e88e5;}
+.whatsapp{background:#25d366;}
+.close{background:#777;}
 
 /* ===== CONTACT ===== */
 .contact{
-  background:#0b5ed7;
+  background:#0b63b6;
   color:#fff;
 }
-.contact a{color:#7CFF7C;text-decoration:none}
-
-/* ===== MAP ===== */
+.contact a{
+  color:#25d366;
+  text-decoration:none;
+  font-weight:600;
+}
 iframe{
   width:100%;
-  height:350px;
-  border:none;
+  height:250px;
+  border:0;
   border-radius:15px;
+  margin-top:20px;
 }
 
-/* ===== FOOTER ===== */
 footer{
-  background:#083d77;
+  background:#084a8f;
   color:#fff;
+  text-align:center;
   padding:10px;
 }
 </style>
@@ -159,78 +161,71 @@ footer{
 
 <body>
 
-<!-- 🌳🦋 DECOR -->
-<div class="decor">
-  <img class="tree left" src="tree.svg">
-  <img class="tree right" src="tree.svg">
-
-  <img class="butterfly" style="top:20%" src="butterfly.svg">
-  <img class="butterfly" style="top:40%;animation-delay:6s" src="butterfly.svg">
-</div>
+<!-- BUTTERFLIES -->
+<img src="https://i.ibb.co/4p2hH9S/butterfly.png" class="butterfly b1">
+<img src="https://i.ibb.co/4p2hH9S/butterfly.png" class="butterfly b2">
+<img src="https://i.ibb.co/4p2hH9S/butterfly.png" class="butterfly b3">
 
 <header>
-  <img src="logo.jpeg">
+  <img src="logo.jpeg" alt="Logo">
   <h1>SRI SAI ENTERPRISES</h1>
   <p>EV Scooters & Multi Brand Motorcycle Showroom</p>
+  <nav>
+    <a href="#ev">EV Scooters</a>
+    <a href="#bike">Multi Brand Motorcycle</a>
+    <a href="#contact">Contact</a>
+  </nav>
 </header>
-
-<nav>
-  <a href="#ev">EV Scooters</a>
-  <a href="#bike">Multi Brand Motorcycle</a>
-  <a href="#contact">Contact</a>
-</nav>
 
 <section id="ev">
   <h2>Electric Scooters</h2>
+  <p>Smart • Silent • Eco-friendly • Low Running Cost</p>
   <div class="cards">
     <div class="card">
       <img src="ev1.jpeg">
       <h3>EV Scooter</h3>
       <p class="price">₹ XXXXX</p>
-      <button class="btn" onclick="openModal()">Enquire</button>
+      <button onclick="openModal()">Enquire</button>
     </div>
     <div class="card">
       <img src="ev2.jpeg">
       <h3>EV Premium</h3>
       <p class="price">₹ XXXXX</p>
-      <button class="btn" onclick="openModal()">Enquire</button>
+      <button onclick="openModal()">Enquire</button>
     </div>
   </div>
 </section>
 
 <section id="bike">
   <h2>Multi Brand Motorcycle</h2>
+  <p>Performance • Reliability • Trusted Brands</p>
   <div class="cards">
     <div class="card">
       <img src="bike1.jpeg">
       <h3>Bike Model</h3>
       <p class="price">₹ XXXXX</p>
-      <button class="btn" onclick="openModal()">Enquire</button>
+      <button onclick="openModal()">Enquire</button>
     </div>
     <div class="card">
       <img src="bike2.jpeg">
       <h3>Bike Premium</h3>
       <p class="price">₹ XXXXX</p>
-      <button class="btn" onclick="openModal()">Enquire</button>
+      <button onclick="openModal()">Enquire</button>
     </div>
   </div>
 </section>
 
 <section id="contact" class="contact">
   <h2>Contact & Location</h2>
-  <p><b>SRI SAI ENTERPRISES</b></p>
-  <p>Owner: Vijay Kumar Junoor</p>
+  <p><b>Owner:</b> Vijay Kumar Junoor</p>
+  <p>📞 <a href="tel:9989445385">9989445385</a> | <a href="tel:9866778223">9866778223</a></p>
   <p>
-    📞 <a href="tel:9989445385">9989445385</a> |
-    <a href="tel:9866778223">9866778223</a>
-  </p>
-  <p>
-    💬 <a href="https://wa.me/919989445385" target="_blank">WhatsApp Available</a>
+    <a href="https://wa.me/919989445385" target="_blank">WhatsApp Available</a>
   </p>
 
-  <!-- 📍 MAP -->
-  <iframe 
-    src="https://www.google.com/maps?q=Sri%20Sai%20Motors%20Ghanpur&output=embed">
+  <!-- MAP -->
+  <iframe
+    src="https://www.google.com/maps?q=Ghanpur%20Telangana&output=embed">
   </iframe>
 </section>
 
@@ -242,16 +237,10 @@ footer{
 <div class="modal" id="modal">
   <div class="modal-box">
     <h3>Exact Price & Offers</h3>
-    <button class="call" onclick="location.href='tel:9989445385'">
-      <i class="fa fa-phone"></i> Call 9989445385
-    </button>
-    <button class="call" onclick="location.href='tel:9866778223'">
-      <i class="fa fa-phone"></i> Call 9866778223
-    </button>
-    <button class="whatsapp" onclick="location.href='https://wa.me/919989445385'">
-      <i class="fa fa-whatsapp"></i> WhatsApp
-    </button>
-    <button class="close" onclick="closeModal()">Close</button>
+    <a class="call" href="tel:9989445385">📞 9989445385</a>
+    <a class="call2" href="tel:9866778223">📞 9866778223</a>
+    <a class="whatsapp" href="https://wa.me/919989445385" target="_blank">WhatsApp</a>
+    <a class="close" href="#" onclick="closeModal()">Close</a>
   </div>
 </div>
 
