@@ -2,245 +2,296 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
-<title>Sri Sai Enterprises</title>
+<title>SRI SAI ENTERPRISES</title>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<!-- FONT -->
-<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+<!-- Font Awesome -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 
 <style>
 *{
-  box-sizing:border-box;
-  font-family:'Poppins',sans-serif;
   margin:0;
   padding:0;
+  box-sizing:border-box;
+  font-family:Arial, Helvetica, sans-serif;
 }
 
-/* ===== BACKGROUND WITH TREES & BUTTERFLIES ===== */
 body{
-  background:
-    url("https://i.ibb.co/9Y8n4C5/trees-bg.png") left bottom no-repeat,
-    url("https://i.ibb.co/9Y8n4C5/trees-bg.png") right bottom no-repeat,
-    linear-gradient(#eaf7f1,#d6efe6);
-  background-size:300px,300px,cover;
-  overflow-x:hidden;
+  background:#e9f6f4;
 }
 
-/* BUTTERFLIES */
-.butterfly{
-  position:fixed;
-  width:40px;
-  animation:fly 18s linear infinite;
-  pointer-events:none;
-  z-index:1;
-}
-.b1{top:20%;left:-50px;animation-delay:0s;}
-.b2{top:40%;left:-80px;animation-delay:6s;}
-.b3{top:60%;left:-60px;animation-delay:12s;}
-
-@keyframes fly{
-  0%{transform:translateX(0) translateY(0) rotate(0deg);}
-  50%{transform:translateX(60vw) translateY(-40px) rotate(10deg);}
-  100%{transform:translateX(120vw) translateY(20px) rotate(-10deg);}
-}
-
-/* ===== HEADER ===== */
+/* HEADER */
 header{
-  background:#0b63b6;
-  color:#fff;
+  background:linear-gradient(120deg,#0b5ed7,#0dcaf0);
+  color:white;
   text-align:center;
-  padding:20px;
-  position:relative;
-  z-index:2;
+  padding:30px 15px;
 }
 header img{
-  width:80px;
+  width:120px;
+  margin-bottom:10px;
+}
+header h1{
+  font-size:34px;
+}
+header p{
+  font-size:16px;
+}
+
+/* NAV */
+nav{
+  background:white;
+  text-align:center;
+  padding:10px;
 }
 nav a{
-  color:#fff;
   margin:0 15px;
   text-decoration:none;
-  font-weight:500;
+  color:#0b5ed7;
+  font-weight:bold;
 }
 
-/* ===== SECTIONS ===== */
+/* SECTION */
 section{
-  padding:50px 20px;
+  padding:50px 15px;
   text-align:center;
-  position:relative;
-  z-index:2;
+}
+h2{
+  font-size:30px;
+  margin-bottom:8px;
+}
+.sub{
+  color:#555;
+  margin-bottom:30px;
 }
 
+/* CARDS */
 .cards{
   display:flex;
   justify-content:center;
   flex-wrap:wrap;
   gap:25px;
 }
-
 .card{
-  background:#fff;
-  width:260px;
-  padding:15px;
-  border-radius:15px;
+  background:white;
+  width:280px;
+  padding:20px;
+  border-radius:18px;
   box-shadow:0 10px 25px rgba(0,0,0,0.15);
 }
 .card img{
   width:100%;
+  height:180px;
+  object-fit:contain;
 }
 .price{
-  color:#0a7c47;
-  font-weight:600;
+  color:#198754;
+  font-weight:bold;
+  margin:6px 0;
 }
-button{
-  background:#0b63b6;
-  color:#fff;
-  border:none;
-  padding:10px 20px;
-  border-radius:25px;
-  cursor:pointer;
+.btn{
   margin-top:10px;
+  padding:10px 22px;
+  border:none;
+  border-radius:25px;
+  background:#0b5ed7;
+  color:white;
+  cursor:pointer;
 }
 
-/* ===== MODAL ===== */
+/* ABOUT */
+.about{
+  background:#f8fefe;
+}
+.about p{
+  max-width:700px;
+  margin:0 auto 20px;
+  color:#444;
+}
+.about ul{
+  max-width:600px;
+  margin:0 auto;
+  text-align:left;
+}
+.about li{
+  margin:8px 0;
+}
+
+/* CONTACT */
+.contact{
+  background:linear-gradient(120deg,#0b5ed7,#0dcaf0);
+  color:white;
+}
+.contact a{
+  color:#90ff90;
+  text-decoration:none;
+  font-weight:bold;
+}
+
+/* MAP */
+iframe{
+  width:100%;
+  height:350px;
+  border:none;
+  border-radius:12px;
+  margin-top:20px;
+}
+
+/* MODAL */
 .modal{
   display:none;
   position:fixed;
   inset:0;
-  background:rgba(0,0,0,0.5);
-  align-items:center;
+  background:rgba(0,0,0,0.6);
   justify-content:center;
-  z-index:10;
+  align-items:center;
 }
 .modal-box{
-  background:#fff;
+  background:white;
   width:320px;
-  padding:20px;
-  border-radius:15px;
+  padding:25px;
+  border-radius:18px;
   text-align:center;
 }
-.modal-box a{
-  display:block;
-  padding:12px;
-  margin:10px 0;
-  border-radius:25px;
-  color:#fff;
-  text-decoration:none;
+.modal-box h3{
+  margin-bottom:8px;
 }
-.call{background:#0b63b6;}
-.call2{background:#1e88e5;}
-.whatsapp{background:#25d366;}
-.close{background:#777;}
-
-/* ===== CONTACT ===== */
-.contact{
-  background:#0b63b6;
-  color:#fff;
+.modal-box p{
+  font-size:14px;
+  color:#555;
+  margin-bottom:10px;
 }
-.contact a{
-  color:#25d366;
-  text-decoration:none;
-  font-weight:600;
-}
-iframe{
+.modal-box button{
   width:100%;
-  height:250px;
-  border:0;
-  border-radius:15px;
-  margin-top:20px;
+  padding:12px;
+  margin-top:10px;
+  border:none;
+  border-radius:25px;
+  color:white;
+  cursor:pointer;
 }
+.call{ background:#0b5ed7; }
+.whatsapp{ background:#25D366; }
+.close{ background:#6c757d; }
 
+/* FOOTER */
 footer{
-  background:#084a8f;
-  color:#fff;
+  background:#083d77;
+  color:white;
   text-align:center;
-  padding:10px;
+  padding:12px;
 }
 </style>
 </head>
 
 <body>
 
-<!-- BUTTERFLIES -->
-<img src="https://i.ibb.co/4p2hH9S/butterfly.png" class="butterfly b1">
-<img src="https://i.ibb.co/4p2hH9S/butterfly.png" class="butterfly b2">
-<img src="https://i.ibb.co/4p2hH9S/butterfly.png" class="butterfly b3">
-
 <header>
-  <img src="logo.jpeg" alt="Logo">
+  <img src="logo.jpeg" alt="Sri Sai Enterprises Logo">
   <h1>SRI SAI ENTERPRISES</h1>
   <p>EV Scooters & Multi Brand Motorcycle Showroom</p>
-  <nav>
-    <a href="#ev">EV Scooters</a>
-    <a href="#bike">Multi Brand Motorcycle</a>
-    <a href="#contact">Contact</a>
-  </nav>
 </header>
+
+<nav>
+  <a href="#ev">EV Scooters</a>
+  <a href="#bike">Multi Brand Motorcycle</a>
+  <a href="#about">About</a>
+  <a href="#contact">Contact</a>
+</nav>
 
 <section id="ev">
   <h2>Electric Scooters</h2>
-  <p>Smart • Silent • Eco-friendly • Low Running Cost</p>
+  <p class="sub">Smart • Silent • Eco-friendly • Low Running Cost</p>
+
   <div class="cards">
     <div class="card">
       <img src="ev1.jpeg">
       <h3>EV Scooter</h3>
-      <p class="price">₹ XXXXX</p>
-      <button onclick="openModal()">Enquire</button>
+      <div class="price">₹ XXXXX</div>
+      <button class="btn" onclick="openModal()">Enquire</button>
     </div>
+
     <div class="card">
       <img src="ev2.jpeg">
       <h3>EV Premium</h3>
-      <p class="price">₹ XXXXX</p>
-      <button onclick="openModal()">Enquire</button>
+      <div class="price">₹ XXXXX</div>
+      <button class="btn" onclick="openModal()">Enquire</button>
     </div>
   </div>
 </section>
 
 <section id="bike">
   <h2>Multi Brand Motorcycle</h2>
-  <p>Performance • Reliability • Trusted Brands</p>
+  <p class="sub">Performance • Reliability • Trusted Brands</p>
+
   <div class="cards">
     <div class="card">
       <img src="bike1.jpeg">
       <h3>Bike Model</h3>
-      <p class="price">₹ XXXXX</p>
-      <button onclick="openModal()">Enquire</button>
+      <div class="price">₹ XXXXX</div>
+      <button class="btn" onclick="openModal()">Enquire</button>
     </div>
+
     <div class="card">
       <img src="bike2.jpeg">
       <h3>Bike Premium</h3>
-      <p class="price">₹ XXXXX</p>
-      <button onclick="openModal()">Enquire</button>
+      <div class="price">₹ XXXXX</div>
+      <button class="btn" onclick="openModal()">Enquire</button>
     </div>
   </div>
 </section>
 
+<section id="about" class="about">
+  <h2>About Us</h2>
+  <p>
+    Sri Sai Enterprises is a trusted EV scooter and multi-brand motorcycle showroom
+    serving Ghanpur with quality vehicles and reliable service.
+  </p>
+  <ul>
+    <li>✔ EV Scooters & Multi Brand Motorcycle Sales</li>
+    <li>✔ Authorized Service & Maintenance</li>
+    <li>✔ Genuine Spare Parts & Accessories</li>
+    <li>✔ Finance, Insurance & Exchange</li>
+    <li>✔ Trusted local showroom in Ghanpur</li>
+  </ul>
+</section>
+
 <section id="contact" class="contact">
   <h2>Contact & Location</h2>
-  <p><b>Owner:</b> Vijay Kumar Junoor</p>
-  <p>📞 <a href="tel:9989445385">9989445385</a> | <a href="tel:9866778223">9866778223</a></p>
+  <p><b>SRI SAI ENTERPRISES</b></p>
+  <p>Owner: Vijay Kumar Junoor</p>
   <p>
-    <a href="https://wa.me/919989445385" target="_blank">WhatsApp Available</a>
+    📞 <a href="tel:9989445385">9989445385</a> |
+    <a href="tel:9866778223">9866778223</a>
   </p>
+  <p>💬 WhatsApp Available</p>
 
-  <!-- MAP -->
-  <iframe
-    src="https://www.google.com/maps?q=Ghanpur%20Telangana&output=embed">
-  </iframe>
+  <iframe src="https://www.google.com/maps?q=SRISAI%20MOTORS%20HERO&output=embed"></iframe>
 </section>
 
 <footer>
-  © 2025 Sri Sai Enterprises
+  © 2025 Sri Sai Enterprises. All Rights Reserved.
 </footer>
 
 <!-- MODAL -->
 <div class="modal" id="modal">
   <div class="modal-box">
     <h3>Exact Price & Offers</h3>
-    <a class="call" href="tel:9989445385">📞 9989445385</a>
-    <a class="call2" href="tel:9866778223">📞 9866778223</a>
-    <a class="whatsapp" href="https://wa.me/919989445385" target="_blank">WhatsApp</a>
-    <a class="close" href="#" onclick="closeModal()">Close</a>
+    <p>Call or WhatsApp for latest price, discounts & availability</p>
+
+    <button class="call" onclick="location.href='tel:9989445385'">
+      <i class="fa fa-phone"></i> Call 9989445385
+    </button>
+
+    <button class="call" onclick="location.href='tel:9866778223'">
+      <i class="fa fa-phone"></i> Call 9866778223
+    </button>
+
+    <button class="whatsapp" onclick="location.href='https://wa.me/919989445385'">
+      <i class="fa-brands fa-whatsapp"></i> WhatsApp
+    </button>
+
+    <button class="close" onclick="closeModal()">Close</button>
   </div>
 </div>
 
