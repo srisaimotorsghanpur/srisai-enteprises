@@ -5,13 +5,13 @@
 <title>SRI SAI ENTERPRISES</title>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<!-- ICONS -->
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
-
 <style>
-*{margin:0;padding:0;box-sizing:border-box;font-family:Segoe UI,Arial;}
+*{box-sizing:border-box}
 body{
-  background:linear-gradient(180deg,#e9f8f6,#cfeeee);
+  margin:0;
+  font-family:Segoe UI,Arial;
+  background:linear-gradient(180deg,#e9f7f5,#cfeee8);
+  color:#053333;
   overflow-x:hidden;
 }
 
@@ -20,134 +20,110 @@ body{
   position:fixed;
   inset:0;
   z-index:-1;
+  pointer-events:none;
+}
+.butterfly{
+  position:absolute;
+  width:32px;
+  opacity:0.6;
+  animation:fly 14s linear infinite;
+}
+@keyframes fly{
+  from{transform:translateX(-10%) translateY(80vh)}
+  to{transform:translateX(110vw) translateY(10vh)}
 }
 .tree{
   position:absolute;
   bottom:0;
-  width:140px;
-  opacity:.15;
-}
-.tree.left{left:20px;}
-.tree.right{right:20px;}
-
-.butterfly{
-  position:absolute;
-  width:40px;
-  opacity:.6;
-  animation:fly 18s linear infinite;
-}
-@keyframes fly{
-  from{transform:translate(-10vw,90vh);}
-  to{transform:translate(110vw,10vh);}
+  width:120px;
+  opacity:0.2;
 }
 
 /* ===== HEADER ===== */
 header{
-  background:linear-gradient(120deg,#0b5ed7,#0dcaf0);
-  color:#fff;
   text-align:center;
-  padding:40px 15px;
+  padding:40px 20px;
+  background:linear-gradient(120deg,#0b5fa5,#138bd4);
+  color:white;
 }
-header img{
-  width:140px;
-  margin-bottom:10px;
-}
-header h1{
-  font-size:36px;
-  letter-spacing:1px;
-}
-header p{
-  font-size:18px;
-  opacity:.95;
-}
+header img{width:90px;margin-bottom:10px}
+header h1{margin:6px 0}
+header p{margin:4px 0;font-size:18px}
 
 /* ===== NAV ===== */
 nav{
-  background:#fff;
+  background:#ffffffdd;
+  padding:12px;
   text-align:center;
-  padding:10px;
 }
 nav a{
-  margin:0 12px;
+  margin:0 15px;
   text-decoration:none;
-  color:#0b5ed7;
   font-weight:600;
+  color:#044;
 }
 
 /* ===== SECTIONS ===== */
 section{
-  padding:50px 15px;
+  padding:60px 20px;
   text-align:center;
-}
-h2{
-  font-size:30px;
-  margin-bottom:10px;
-}
-.sub{
-  color:#555;
-  margin-bottom:25px;
 }
 
 /* ===== CARDS ===== */
 .cards{
   display:flex;
+  gap:25px;
   justify-content:center;
   flex-wrap:wrap;
-  gap:25px;
 }
 .card{
+  width:260px;
   background:#fff;
-  width:280px;
-  padding:20px;
-  border-radius:18px;
-  box-shadow:0 10px 25px rgba(0,0,0,.12);
+  border-radius:16px;
+  padding:15px;
+  box-shadow:0 8px 20px rgba(0,0,0,0.15);
 }
 .card img{
   width:100%;
+  height:170px;
+  object-fit:contain;
 }
-.price{
-  color:#198754;
-  font-weight:700;
-  margin:5px 0;
-}
-.btn{
-  margin-top:10px;
-  padding:10px 18px;
+.card h3{margin:10px 0 5px}
+.price{font-weight:bold;color:#0a7a3c}
+button{
+  background:#0b5fa5;
+  color:white;
   border:none;
-  border-radius:30px;
+  padding:10px 24px;
+  border-radius:22px;
   cursor:pointer;
-  color:#fff;
-  background:#0b5ed7;
+  margin-top:10px;
 }
 
 /* ===== ABOUT ===== */
 .about ul{
-  max-width:700px;
+  max-width:600px;
   margin:20px auto;
   text-align:left;
-}
-.about li{
-  margin:10px 0;
-  font-size:17px;
 }
 
 /* ===== CONTACT ===== */
 .contact{
-  background:linear-gradient(120deg,#0b5ed7,#0dcaf0);
-  color:#fff;
+  background:#0b3d59;
+  color:white;
 }
 .contact a{
-  color:#7CFF7C;
-  font-weight:700;
+  color:#25d366;
   text-decoration:none;
 }
 
 /* ===== MAP ===== */
-.map iframe{
+iframe{
   width:100%;
-  height:350px;
-  border-radius:15px;
-  border:none;
+  height:320px;
+  border:0;
+  border-radius:18px;
+  margin-top:20px;
 }
 
 /* ===== MODAL ===== */
@@ -155,65 +131,72 @@ h2{
   display:none;
   position:fixed;
   inset:0;
-  background:rgba(0,0,0,.6);
-  justify-content:center;
-  align-items:center;
+  background:rgba(0,0,0,0.6);
+  z-index:9999;
 }
-.modal-box{
+.modal-content{
   background:#fff;
-  padding:25px;
-  width:300px;
-  border-radius:20px;
+  width:90%;
+  max-width:380px;
+  margin:10% auto;
+  padding:22px;
+  border-radius:16px;
   text-align:center;
+  animation:pop .3s ease;
 }
-.modal-box h3{
-  margin-bottom:10px;
+@keyframes pop{
+  from{transform:scale(.7);opacity:0}
+  to{transform:scale(1);opacity:1}
 }
-.modal-box p{
-  font-size:15px;
-  color:#555;
+.offer-points{
+  text-align:left;
+  margin:15px 0;
 }
-.call{
-  background:#0b5ed7;
+.offer-points li{
+  margin-bottom:6px;
 }
-.whatsapp{
-  background:#25D366;
-}
-.close{
-  background:#6c757d;
-}
-.modal-box button{
-  width:100%;
-  margin-top:10px;
+.btn{
+  display:block;
+  margin:10px 0;
   padding:10px;
-  border:none;
-  border-radius:25px;
-  color:#fff;
-  cursor:pointer;
+  border-radius:22px;
+  color:white;
+  text-decoration:none;
+  font-weight:600;
 }
-
-/* ===== FOOTER ===== */
-footer{
-  background:#083d77;
-  color:#fff;
-  text-align:center;
-  padding:12px;
+.call-btn{background:#1e88e5}
+.whatsapp-btn{background:#25d366}
+.close-btn{
+  background:#999;
+  border:none;
+  width:100%;
 }
 </style>
 </head>
 
 <body>
 
-<!-- DECOR -->
+<!-- 🌳🦋 BACKGROUND -->
 <div class="decor">
-  <img class="tree left" src="https://i.imgur.com/2yaf2wb.png">
-  <img class="tree right" src="https://i.imgur.com/2yaf2wb.png">
-  <img class="butterfly" style="top:20%" src="https://i.imgur.com/1X4FQbK.png">
-  <img class="butterfly" style="top:40%;animation-delay:5s" src="https://i.imgur.com/1X4FQbK.png">
+  <svg class="butterfly" style="top:20%" viewBox="0 0 64 64">
+    <path fill="#ff80ab" d="M32 32c-8-18-24-16-24 0s16 16 24 0 24-16 24 0-16 16-24 0z"/>
+  </svg>
+  <svg class="butterfly" style="top:40%;animation-delay:4s" viewBox="0 0 64 64">
+    <path fill="#ffd54f" d="M32 32c-8-18-24-16-24 0s16 16 24 0 24-16 24 0-16 16-24 0z"/>
+  </svg>
+
+  <svg class="tree" style="left:6%" viewBox="0 0 64 128">
+    <circle cx="32" cy="30" r="30" fill="#2e7d32"/>
+    <rect x="26" y="60" width="12" height="60" fill="#5d4037"/>
+  </svg>
+  <svg class="tree" style="right:6%" viewBox="0 0 64 128">
+    <circle cx="32" cy="30" r="30" fill="#1b5e20"/>
+    <rect x="26" y="60" width="12" height="60" fill="#4e342e"/>
+  </svg>
 </div>
 
 <header>
-  <img src="logo.png" alt="Logo">
+  <img src="logo.jpeg">
   <h1>SRI SAI ENTERPRISES</h1>
   <p>EV Scooters & Multi Brand Motorcycle Showroom</p>
 </header>
@@ -226,107 +209,86 @@ footer{
 </nav>
 
 <section id="ev">
-  <h2>Electric Scooters</h2>
-  <p class="sub">Smart • Silent • Eco-friendly • Low Running Cost</p>
-
-  <div class="cards">
-    <div class="card">
-      <img src="https://i.imgur.com/6s8QX9p.png">
-      <h3>EV Scooters</h3>
-      <div class="price">₹ XXXXX</div>
-      <button class="btn" onclick="openModal()">Enquire</button>
-    </div>
-
-    <div class="card">
-      <img src="https://i.imgur.com/q7Y8E0B.png">
-      <h3>EV Premium</h3>
-      <div class="price">₹ XXXXX</div>
-      <button class="btn" onclick="openModal()">Enquire</button>
-    </div>
+<h2>Electric Scooters</h2>
+<p>Smart, silent & eco-friendly EV scooters.</p>
+<div class="cards">
+  <div class="card">
+    <img src="ev1.jpeg">
+    <h3>EV Scooter</h3>
+    <div class="price">₹ XXXXX</div>
+    <button onclick="openModal()">Enquire</button>
   </div>
+  <div class="card">
+    <img src="ev2.jpeg">
+    <h3>EV Premium</h3>
+    <div class="price">₹ XXXXX</div>
+    <button onclick="openModal()">Enquire</button>
+  </div>
+</div>
 </section>
 
 <section id="bike">
-  <h2>Multi Brand Motorcycle</h2>
-  <p class="sub">Performance • Reliability • Trusted Brands</p>
-
-  <div class="cards">
-    <div class="card">
-      <img src="https://i.imgur.com/4KX9A5g.png">
-      <h3>Bike Model</h3>
-      <div class="price">₹ XXXXX</div>
-      <button class="btn" onclick="openModal()">Enquire</button>
-    </div>
-
-    <div class="card">
-      <img src="https://i.imgur.com/Z3b4zQb.png">
-      <h3>Bike Premium</h3>
-      <div class="price">₹ XXXXX</div>
-      <button class="btn" onclick="openModal()">Enquire</button>
-    </div>
+<h2>Multi Brand Motorcycle</h2>
+<p>Performance & reliability from trusted brands.</p>
+<div class="cards">
+  <div class="card">
+    <img src="bike1.jpeg">
+    <h3>Bike Model</h3>
+    <div class="price">₹ XXXXX</div>
+    <button onclick="openModal()">Enquire</button>
   </div>
+  <div class="card">
+    <img src="bike2.jpeg">
+    <h3>Bike Premium</h3>
+    <div class="price">₹ XXXXX</div>
+    <button onclick="openModal()">Enquire</button>
+  </div>
+</div>
 </section>
 
 <section id="about" class="about">
-  <h2>About Us</h2>
-  <ul>
-    <li>✔ Sales of EV Scooters & Multi Brand Motorcycles</li>
-    <li>✔ Authorized Service & Maintenance</li>
-    <li>✔ Genuine Spare Parts & Accessories</li>
-    <li>✔ Exchange & Finance Assistance</li>
-    <li>✔ Customer-first approach with trusted service</li>
-  </ul>
+<h2>About Us</h2>
+<ul>
+  <li>✔ Sales of EV Scooters & Motorcycles</li>
+  <li>✔ Authorized Service & Maintenance</li>
+  <li>✔ Genuine Spare Parts</li>
+  <li>✔ Customer-friendly support</li>
+</ul>
 </section>
 
 <section id="contact" class="contact">
-  <h2>Contact & Location</h2>
-  <p><b>SRI SAI ENTERPRISES</b></p>
-  <p>Owner: Vijay Kumar Junoor</p>
-  <p>
-    📞 <a href="tel:9989445385">9989445385</a> |
-    <a href="tel:9866778223">9866778223</a>
-  </p>
-  <p>💬 WhatsApp Available</p>
+<h2>Contact & Location</h2>
+<p><b>SRI SAI ENTERPRISES</b></p>
+<p>📞 <a href="tel:9989445385">9989445385</a> | <a href="tel:9866778223">9866778223</a></p>
+<p>💬 <a href="https://wa.me/919989445385">WhatsApp Available</a></p>
 
-  <div class="map">
-    <iframe 
-      src="https://www.google.com/maps?q=SRISAI%20MOTORS%20HERO&output=embed">
-    </iframe>
-  </div>
+<iframe src="https://www.google.com/maps?q=SRISAI%20MOTORS%20HERO&output=embed"></iframe>
 </section>
 
-<footer>
-  © 2025 Sri Sai Enterprises. All Rights Reserved.
-</footer>
-
 <!-- MODAL -->
-<div class="modal" id="modal">
-  <div class="modal-box">
-    <h3>Exact Price & Offers</h3>
-    <p>For latest price, discounts & availability</p>
-
-    <button class="call" onclick="location.href='tel:9989445385'">
-      <i class="fa fa-phone"></i> Call Now
-    </button>
-
-    <button class="call" onclick="location.href='tel:9866778223'">
-      <i class="fa fa-phone"></i> Secondary Call
-    </button>
-
-    <button class="whatsapp" onclick="location.href='https://wa.me/919989445385'">
-      <i class="fa fa-whatsapp"></i> WhatsApp
-    </button>
-
-    <button class="close" onclick="closeModal()">Close</button>
+<div id="priceModal" class="modal">
+  <div class="modal-content">
+    <h2>Exact Price & Offers</h2>
+    <ul class="offer-points">
+      <li>✔ On-road price details</li>
+      <li>✔ Latest offers & discounts</li>
+      <li>✔ Finance & EMI options</li>
+      <li>✔ Exchange & festive benefits</li>
+      <li>✔ Sales • Service • Spare Parts</li>
+    </ul>
+    <a class="btn call-btn" href="tel:9989445385">📞 Call: 9989445385</a>
+    <a class="btn call-btn" href="tel:9866778223">📞 Call: 9866778223</a>
+    <a class="btn whatsapp-btn" href="https://wa.me/919989445385">💬 WhatsApp</a>
+    <button class="btn close-btn" onclick="closeModal()">Close</button>
   </div>
 </div>
 
 <script>
 function openModal(){
-  document.getElementById("modal").style.display="flex";
+  document.getElementById("priceModal").style.display="block";
 }
 function closeModal(){
-  document.getElementById("modal").style.display="none";
+  document.getElementById("priceModal").style.display="none";
 }
 </script>
 
